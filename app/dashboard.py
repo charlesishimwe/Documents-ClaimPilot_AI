@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -6,7 +7,7 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent.parent
 CSV_FILE = ROOT / "data" / "synthetic" / "claims.csv"
-API = "http://127.0.0.1:8010"
+API = os.getenv("CLAIMPILOT_API_URL", "http://127.0.0.1:8010").rstrip("/")
 
 st.set_page_config(
     page_title="ClaimPilot AI",
