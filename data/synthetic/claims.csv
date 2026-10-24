@@ -1,0 +1,13 @@
+claim_id,claim_type,claim_description,claim_amount,currency,status,documents_received,required_documents
+CLM001,Health/Medical,Doctor consultation,150,CAD,Pending,Medical receipt,Medical receipt
+CLM002,Dental,Dental cleaning,200,CAD,New,Dental receipt,Dental receipt
+CLM003,Disability,Temporary inability to work,1200,CAD,Under Review,Medical note,Medical note; Employer form
+CLM004,Life Insurance,Life insurance benefit request,50000,CAD,New,Death certificate,Death certificate; Beneficiary form
+CLM005,Critical Illness,Critical illness benefit request,25000,CAD,Pending,Physician report,Physician report; Diagnosis confirmation
+CLM006,Travel,Emergency medical care abroad,1800,CAD,Under Review,Hospital receipt,Hospital receipt; Travel insurance form
+CLM007,Mortgage Protection,Mortgage payment protection request,900,CAD,New,Loan statement,Loan statement; Disability evidence
+CLM008,AD&D,Accidental injury benefit request,7000,CAD,Pending,Accident report,Accident report; Medical evidence
+CLM009,HCSA,Health spending reimbursement,350,CAD,New,Pharmacy receipt,Eligible expense receipt
+CLM010,Dependent,Dependent medical expense,175,CAD,Pending,Medical receipt,Medical receipt; Dependent eligibility proof
+CLM011,COB,Coordination of benefits reimbursement,240,CAD,Under Review,Provider receipt,Provider receipt; Other insurer statement
+CLM012,Other/Optional,Optional coverage benefit request,600,CAD,New,Claim form,Claim form; Policy details
