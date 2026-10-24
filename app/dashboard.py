@@ -69,8 +69,12 @@ def get_api(path):
 
 def load_claims():
     data, error = get_api("/claims")
+
+    if isinstance(data, dict) and isinstance(data.get("claims"), list):
+        return pd.DataFrame(data["claims"]), True, None
+
     if isinstance(data, list):
-        return pd.DataFrame(data), True, error
+        return pd.DataFrame(data), True, None
 
     if CSV_FILE.exists():
         try:
