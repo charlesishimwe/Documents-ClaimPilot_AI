@@ -7,7 +7,13 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent.parent
 CSV_FILE = ROOT / "data" / "synthetic" / "claims.csv"
-API = os.getenv("CLAIMPILOT_API_URL", "http://127.0.0.1:8010").rstrip("/")
+API = os.getenv(
+    "CLAIMPILOT_API_URL",
+    "http://127.0.0.1:8010",
+).strip().rstrip("/")
+
+if API and not API.startswith(("http://", "https://")):
+    API = f"https://{API}"
 
 st.set_page_config(
     page_title="ClaimPilot AI",
